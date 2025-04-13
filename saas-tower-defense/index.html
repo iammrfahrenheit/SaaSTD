@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaS Tower Defense</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="game-canvas-container">
+            <canvas id="game-canvas"></canvas>
+        </div>
+        
+        <div id="game-ui">
+            <div id="resource-panel">
+                <div class="resource">Capital: <span id="capital">$500K</span></div>
+                <div class="resource">ARR: <span id="arr">$0</span></div>
+                <div class="resource">Burn Rate: <span id="burn-rate">$0</span></div>
+            </div>
+            
+            <div id="tower-panel">
+                <h3>Place Tower</h3>
+                <button id="sales-tower-btn" class="tower-btn">Sales ($75K)</button>
+                <button id="csm-tower-btn" class="tower-btn">CSM ($60K)</button>
+            </div>
+            
+            <div id="tower-info" class="hidden">
+                <h3>Tower Info</h3>
+                <div id="tower-details"></div>
+                <div id="tower-actions">
+                    <button id="upgrade-tower-btn">Upgrade</button>
+                    <button id="sell-tower-btn">Sell</button>
+                </div>
+            </div>
+            
+            <div id="product-panel">
+                <h3>Product</h3>
+                <button id="product-upgrade-btn">Upgrade Product</button>
+                <div id="product-progress" class="hidden">
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="controls-panel">
+                <button id="pause-btn">Pause</button>
+                <button id="normal-speed-btn" class="active">1x</button>
+                <button id="fast-speed-btn">2x</button>
+            </div>
+        </div>
+        
+        <div id="metrics-panel">
+            <div class="metric">
+                <div class="metric-label">NRR</div>
+                <div class="metric-value" id="nrr">0%</div>
+            </div>
+            <div class="metric">
+                <div class="metric-label">GRR</div>
+                <div class="metric-value" id="grr">0%</div>
+            </div>
+            <div class="metric">
+                <div class="metric-label">ARR</div>
+                <div class="metric-value" id="arr-metric">$0</div>
+            </div>
+            <div class="metric">
+                <div class="metric-label">CAC</div>
+                <div class="metric-value" id="cac">$0</div>
+            </div>
+            <div class="metric">
+                <div class="metric-label">LTV</div>
+                <div class="metric-value" id="ltv">$0</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load scripts in the correct order -->
+    <script src="/js/path.js"></script>
+    <script src="/js/customer.js"></script>
+    <script src="/js/tower.js"></script>
+    <script src="/js/metrics.js"></script>
+    <script src="/js/ui.js"></script>
+    <script src="/js/game.js"></script>
+</body>
+</html>
